@@ -1,0 +1,132 @@
+.repositories__restraint-container {
+    width: min(100% - 1rem, 830px);
+
+    margin: .5em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+    /* border: 2px solid pink; */
+}
+.repositories__restraint-container h1 {
+    margin: 2em 0 1em 0;
+    text-align: center;
+    opacity: .8;
+}
+
+.repositories-container {
+    width: min(100%, 1000px);
+    min-width: 270px;
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+}
+
+.repository-container {
+    /* width: 100% -1rem; */
+    /* margin: 0 .5rem; */
+    padding: .5rem;
+    margin: .3rem 0;
+    /* border: 2px solid yellow; */
+    font-size: 1rem;
+    /* text-align: center; */
+    background-color: var( --main-clr-light);
+    border-radius: 5px;
+}
+
+.repository__close-icon,
+.repository__open-icon {
+    padding-left: .5rem;
+    padding-top: .1em;
+}
+
+/* .repository__open-icon {
+    padding-left: .5rem;
+    padding-top: .2em;
+} */
+
+.repository__toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    white-space: nowrap;
+    opacity: .8;
+    /* border: 2px solid purple */
+}
+
+.repo-closed {
+    display: flex;
+    justify-content: space-between;
+}
+
+.repository__inner-container {
+   display: grid;
+   /* grid-template-columns: 160px 1fr; */
+   margin: 1rem 0;
+}
+
+
+.repository__inner-container  > p + p {
+  font-family: 'PT Sans', sans-serif;
+  max-width: 700px;
+}
+
+
+.repository__values-container__heading {
+    opacity: .8;
+}
+
+
+.color {
+    color: var(--white-clr);
+}
+
+
+.repository__language-container {
+    margin: 2rem 0 0 0;
+}
+
+
+.repository__languages-header {
+    text-align: center;
+    font-weight: var( --font-medium);
+    font-size: var(--font-reg-med);
+    opacity: .8;
+}
+
+
+.repository__languages__inner-container {
+    font-size: var(--font-reg);
+    margin: 1rem 0 0 0;
+    fill: var(--white-clr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    column-gap: 2rem;
+}
+
+
+@media (min-width: 450px) {
+    .repositories__restraint-container {
+        width: min(100% - 2rem, 830px);
+    }
+
+
+    .repository-container {
+        padding:  .5rem 1rem
+    }
+
+
+    .repository__inner-container {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+          margin: 1rem 0;
+     }
+}
+
+
+
