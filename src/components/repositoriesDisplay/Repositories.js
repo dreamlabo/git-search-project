@@ -10,7 +10,6 @@ const Repositories = () => {
   // Functions
   const displayRepositories = () => {
     return searchResults.items.map( (repo, index) => {
-     
       return <Repository key={index + repo.name}
                          repoName={repo.name}
                          repoOwner={repo.owner.login}
@@ -18,6 +17,8 @@ const Repositories = () => {
                          description={repo.description}
                          primaryLanguage={repo.language}
                          languages_url={repo.languages_url}
+                         repo_html_url={repo.html_url}
+                         homepage={repo.homepage}
              />
     })
   }

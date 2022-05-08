@@ -14,7 +14,7 @@ import axios from 'axios';
 
 const Search = () => {
 
-  const langageList = ['C', 'Cpp', 'Csharp', 'Go', 'Java', 'JavaScript', 'Kotlin', 'Node',  'Objective-C', 'PHP', 'Python', 'R', 'Swift', 'TypeScript'];
+  const langageList = ['C', 'Cpp', 'Csharp', 'Go', 'Java', 'JavaScript', 'Kotlin', 'Objective-C', 'PHP', 'Python', 'R', 'Rust', 'Swift', 'TypeScript'];
   const BUTTON_TEXT_RETURN_BY_STARS = 'Show Results by Stars';
   const BUTTON_TEXT_RETURN_BY_BEST_MATCH = 'Show Results by Best Match';
   const SEARCH_RESULTS_HEADER_STARS = 'Results Shown by Star Count';
@@ -201,14 +201,14 @@ const Search = () => {
                                     : null 
               }
             </div>
-
-            <div className='restraint-container flex columns justify inner-wrapper'>
-                <h1 className='search-results__header'>Search Results</h1>
-                <p>{returnByStars ? SEARCH_RESULTS_HEADER_STARS : SEARCH_RESULTS_HEADER_BEST_MATCH }</p>
-                <button className='searchResultsHeader__button'  onClick={toggleReturnByStars}>
-                  {returnByStars ? BUTTON_TEXT_RETURN_BY_BEST_MATCH : BUTTON_TEXT_RETURN_BY_STARS}
-                </button>
-            </div>
+            { searchResults && <div className='restraint-container flex columns justify inner-wrapper'>
+                                    <h1 className='search-results__header'>Search Results</h1>
+                                    <p>{returnByStars ? SEARCH_RESULTS_HEADER_STARS : SEARCH_RESULTS_HEADER_BEST_MATCH }</p>
+                                    <button className='searchResultsHeader__button'  onClick={toggleReturnByStars}>
+                                        {returnByStars ? BUTTON_TEXT_RETURN_BY_BEST_MATCH : BUTTON_TEXT_RETURN_BY_STARS}
+                                    </button>
+                                </div>}
+        
     </div>
   )
 }

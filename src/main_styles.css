@@ -49,6 +49,13 @@ label
     background-color: inherit;
 }
 
+a {
+    color: var(--white-clr)
+}
+a:hover {
+    color: var(--accent-clr-one)
+}
+
 .restraint-container {
     width: min(100% - 2rem, 1500px);
     margin: 0 auto;
@@ -107,6 +114,7 @@ label
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-around;
+    padding-bottom: 1rem;
     /* text-align: center; */
 }
 

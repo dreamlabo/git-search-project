@@ -66,24 +66,25 @@ const SearchStatistics = () => {
 
   return (
     <section className='searchStats__container'>
-      <div>
-        <h1>Search Statistics</h1>
-        <div className='searchStats__inner-container'>
-            {searchResults && <div>
-                                <h3 >Repositories Discovered</h3>
-                                {console.log(searchResults)}
-                                {console.log('results: ' +  searchResults.items.length)}
-                                <p className='searcStats__num_of_repos'>{parseInt(searchResults.total_count).toLocaleString()}</p>
-                              </div>}
+      {  searchResults && <div>
+                            <h1>Search Statistics</h1>
+                            <div className='searchStats__inner-container'>
+                                {searchResults && <div>
+                                                    <h3 >Repositories Discovered</h3>
+                                                    {console.log(searchResults)}
+                                                    {console.log('results: ' +  searchResults.items.length)}
+                                                    <p className='searcStats__num_of_repos'>{parseInt(searchResults.total_count).toLocaleString()}</p>
+                                                  </div>}
 
-              <div>
-                <h3>Language Distribution</h3>
-                {searchResults && <div className='searchStats__languages-container'>
-                                        {displayLanguageDistibution()}
-                                  </div>}
-              </div> 
-        </div>
-      </div>
+                                  <div>
+                                    <h3>Language Distribution</h3>
+                                    {searchResults && <div className='searchStats__languages-container'>
+                                                            {displayLanguageDistibution()}
+                                                      </div>}
+                                  </div> 
+                            </div>
+                          </div>}
+
     </section>
   )
 }

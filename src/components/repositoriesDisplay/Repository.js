@@ -9,7 +9,7 @@ import PieChart from './PieChart';
 
 
 
-const Repository = ({repoName, repoOwner, stars, description, primaryLanguage, languages_url }) => {
+const Repository = ({repoName, repoOwner, stars, description, primaryLanguage, languages_url, repo_html_url, homepage}) => {
 
     // State variables
     const [repositoryIsOpen, setRepositoryIsOpen] = useState(false);
@@ -94,6 +94,7 @@ const Repository = ({repoName, repoOwner, stars, description, primaryLanguage, l
                                     <p className='repository__values-container__heading'>Repository Name:</p>
                                     <p>{repoName}</p>
                                 </div>
+                            
                                 <div className='repository__inner-container'>
                                     <p className='repository__values-container__heading'>Owner's Name:</p>
                                     <p>{repoOwner}</p>
@@ -111,6 +112,16 @@ const Repository = ({repoName, repoOwner, stars, description, primaryLanguage, l
                                     <p >{description}
                                     </p>
                                 </div>
+
+                                <div className='repository__inner-container'>
+                                    <p className='repository__values-container__heading'>Repository URL:</p>
+                                    <p><a href={repo_html_url} target="_blank">{repo_html_url}</a></p>
+                                </div>
+
+                                { homepage && <div className='repository__inner-container'>
+                                    <p className='repository__values-container__heading'>Homepage:</p>
+                                    <p><a href={homepage} target="_blank">{homepage}</a></p>
+                                </div>}
 
                             
                                 <div className='repository__language-container'>
