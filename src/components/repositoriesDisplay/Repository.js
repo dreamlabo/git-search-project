@@ -150,56 +150,7 @@ const Repository = ({repoName, repoOwner, stars, description, primaryLanguage, l
                                         }
                                     </div>
                                    }
-                                    </div>
-                                    {/* <h4 className='repository__languages-header'>Language(s)</h4>
-                                    <div className='repository__languages__inner-container'>
-                                        <div >
-                                            <p className='repository__inner-container__values '>JavaScript </p>
-                                            <RadialGauge
-                                                data={[{ key: 'Austin, TX', data: 55 }]}
-                                                minValue={0}
-                                                maxValue={100}
-                                                height={125}
-                                                width={125}
-                                                series={<StackedRadialGaugeSeries 
-                                                        colorScheme={'#A213BA'} 
-                                                label={<StackedRadialGaugeLabel 
-                                                    label={'78%'} />} 
-                                                />}
-                                            />
-                                        </div>
-                                        <div style={{fill: 'white'}}> 
-                                            <p className='repository__inner-container__values'>HTML</p>
-                                            <RadialGauge
-                                                data={[{ key: 'Austin, TX', data: 25 }]}
-                                                minValue={0}
-                                                maxValue={100}
-                                                height={125}
-                                                width={125}
-                                                series={<StackedRadialGaugeSeries 
-                                                    colorScheme={'#A213BA'} 
-                                                    label={<StackedRadialGaugeLabel label={'25%'} />}   />}
-                                            />
-                                        </div>
-                                        <div style={{fill: 'white'}}>
-                                            <p className='repository__inner-container__values'>CSS</p>
-                                            <RadialGauge 
-                                                data={[{ key: 'Austin, TX', data: 20 }]}
-                                                minValue={0}
-                                                maxValue={100}
-                                                height={125}
-                                                width={125}
-                                                series={<StackedRadialGaugeSeries 
-                                                    colorScheme={'#A213BA'} 
-                                                    label={<StackedRadialGaugeLabel  label={'20%'} 
-                                                    />}   
-                                                />}
-                                            />
-                                                
-                                        </div> */}
-                                        
-                                {/* </div> */}
-
+                                 </div>
                             </div>
                            
                             :<div className='repo-closed' onClick={toggleRepoView}>
