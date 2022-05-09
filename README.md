@@ -23,5 +23,5 @@ Build a repository search application using the Github repository search API whi
 
 ## Using the Application
 When navigating to the home page, users will be greeted with the following page:
-!{[Initial Homepage] (https://github.com/dreamlabo/git-search-project/blob/main/src/screenshots/initial_homepage.png)
+![Initial Homepage] (https://github.com/dreamlabo/git-search-project/blob/main/src/screenshots/initial_homepage.png)
  
