@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react';
-import { SearchContext, LoadingContext } from '../../hooks/Contexts';
+import React from 'react';
+
 import Repositories from './Repositories'
 
 const RepositoriesDisplay = () => {

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { SearchContext } from '../../hooks/Contexts';
 import Repository from './Repository';
 import './repositoriesDisplay_styles.css';
@@ -22,7 +22,6 @@ const Repositories = () => {
              />
     })
   }
-
 
   return (
     <div className='repositories-container'>

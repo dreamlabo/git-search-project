@@ -3,10 +3,7 @@ import React from 'react'
 const CheckBox = ({languageSearchTerms, language, isChecked, checkboxHandler}) => {
 
   const isCheckboxChecked = (lang) => {
-    console.log("check " + languageSearchTerms)
     return languageSearchTerms.includes(lang);
-   
-     
   }
 
   
@@ -20,7 +17,6 @@ const CheckBox = ({languageSearchTerms, language, isChecked, checkboxHandler}) =
                               name={language}
                               value={language}
                               checked={isChecked}
-                              // onClick={}
                               onChange={ e => checkboxHandler(e.target.name)} 
                               > 
                         </input>

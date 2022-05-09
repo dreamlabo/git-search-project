@@ -1,18 +1,16 @@
 .header__restraint-container {
     width: min(100% - 1rem, 1500px);
-    /* border: 2px solid red; */
-    margin: 0 auto;
-    
+    margin: 0 auto; 
 }
 
 .header__main-container {
     color: white;
     padding: .5rem 0;
-    /* min-height: 5rem; */
     background-color: var(--main-clr-light);
     font-weight: var(--font-bold);
     font-size: 5px;
 }
+
 
 .header__inner-cont {
     font-size: var(--font-reg);
@@ -21,9 +19,9 @@
     justify-content: space-between;
 }
 
+
 .header__span-icon {
     margin-right: .5rem;
-  
 }
 
 .header__span {
@@ -31,21 +29,16 @@
     margin-right: .2rem;
 }
 
+
 @media (min-width: 500px) {
     .header__restraint-container {
-        width: min(100% - 2.5rem, 1500px);
-       
-        
+        width: min(100% - 2.5rem, 1500px); 
     }
-
-
-
-
 }
+
 
 @media (min-width: 1000px) {
     .header__main-container {
         padding: 1rem 0;
-
     }
 }

@@ -1,16 +1,14 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import CheckBox from './CheckBox';
-// import SearchResultsHeader from '../searchResultsheader/SearchResultsHeader';
 
-import { SearchContext, LoadingContext } from '../../hooks/Contexts';
+import { SearchContext } from '../../hooks/Contexts';
 import './search_style.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { faFilter, faCaretDown, faCaretUp, faCaretSquareUp } from '@fortawesome/free-solid-svg-icons'
+import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
 
-// import SearchBar from './SearchBar';
-// import FilterComponent from './FilterComponent';
+
 
 const Search = () => {
 
@@ -45,37 +43,30 @@ const Search = () => {
 
   const callAPI = (byStars) => {
   
-
     if(searchTerm === '') {
       setErrorClass(true);
       return
     }
 
     let languages = '';
-    console.log('return: ' + byStars)
 
     for(let term in languageSearchTerms){
       languages = languages + '+language:' + languageSearchTerms[term];
     }
-      // console.log('language: ' + languages);
+
+    let query = 'https://api.github.com/search/repositories?q=' + searchTerm + languages; 
     
-      // const query = 'https://api.github.com/search/repositories?q=' + searchTerm; 
-      let query = 'https://api.github.com/search/repositories?q=' + searchTerm + languages; 
-     
-      if(byStars === true){
-          query = query + '&sort=stars'
-      }
-      console.log(query);
-      
-      axios.get(query)
-        .then((response) => {
-          // console.log(response.data);
-          setSearchResults(response.data);
-          // console.log(searchResults);
-        })
-        .catch(error => {
-          console.log(error);
-        })
+    if(byStars === true){
+        query = query + '&sort=stars'
+    }
+    
+    axios.get(query)
+      .then((response) => {
+        setSearchResults(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      })
   }
 
 
@@ -88,18 +79,15 @@ const Search = () => {
   // Filter Functions
   const setDropdownCheckboxesOpen = () => {
     setIsCheckboxFieldOpen(!isCheckboxFieldOpen);
-    // console.log(isCheckboxFieldOpen);
   }
 
 
   const checkboxHandler = (language => {
     const containsTerm = languageSearchTerms.indexOf(language);
-    // console.log('Term ' + languageSearchTerms);
     if (containsTerm !== -1){
         const lang = languageSearchTerms;
         lang.splice(containsTerm, 1);
         setLanguageSearchTerms([...lang]);
-        // console.log('After ' + languageSearchTerms);
     }
     else {
       const langNew = languageSearchTerms;
@@ -110,13 +98,11 @@ const Search = () => {
 
 
   const isCheckboxChecked = (lang) => {
-    // console.log("check " + languageSearchTerms)
     return languageSearchTerms.includes(lang);
   }
 
 
   const checkboxList = () => {
-      // console.log('clicked open')
       return langageList.map((language) => {
             const isChecked = isCheckboxChecked(language)
           return <CheckBox key={language}
@@ -131,20 +117,7 @@ const Search = () => {
 
   // Results Header Functions
   const toggleReturnByStars = (e) => {
-    // setReturnByStars(!returnByStars);
- 
     const viewByStarOrder = !returnByStars;
-    console.log("state" + viewByStarOrder)
-  
-    // if(buttonText === BUTTON_TEXT_RETURN_BY_STARS) {
-    //     buttonText = BUTTON_TEXT_RETURN_BY_STARS;
-    //     viewByStarOrder = true;
-    // }
-    // else{
-    //   buttonText = BUTTON_TEXT_RETURN_BY_STARS;
-    //   viewByStarOrder = false;
-    // }
-    console.log(buttonText)
     callAPI(viewByStarOrder);
     setReturnByStars(viewByStarOrder);
   }
@@ -186,19 +159,13 @@ const Search = () => {
                 </span>
               </label>
               
-              { isCheckboxFieldOpen ? 
-                                    <div className='filter__checkbox-wrapper'>
+              { isCheckboxFieldOpen ? <div className='filter__checkbox-wrapper'>
                                         <div className='filter__checbox-flex-container'>
                                           {checkboxList()}
                                         </div>
-                                        
-                                        {/* <div className='filter__btn-container'>
-                                          <button className='filter__apply-btn'
-                                                  onClick={updateFilterTerms}>Apply Filters
-                                          </button>
-                                        </div> */}
-                                    </div>
-                                    : null 
+                                      </div>
+                                      : 
+                                      null 
               }
             </div>
             { searchResults && <div className='restraint-container flex columns justify inner-wrapper'>

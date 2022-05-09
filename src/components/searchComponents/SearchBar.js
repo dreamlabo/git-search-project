@@ -12,15 +12,14 @@ const SearchBar = () => {
   const {searchResults, setSearchResults} = useContext(SearchContext);
   const [errorClass, setErrorClass] = useState(false);
 
+  
   // Functions
-
   const setTerm = (e) => {
     e.preventDefault();
     if(searchTerm.length > 0 && errorClass){
       setErrorClass(false);
     }
     setSearchTerm(e.target.value);
-    // console.log(e.target.value);
   }
 
 

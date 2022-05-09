@@ -3,14 +3,11 @@ import './repositoriesDisplay_styles.css';
 import { RadialGauge, StackedRadialGaugeSeries, StackedRadialGaugeLabel } from 'reaviz';
 
 const PieChart = ({percent, language, percentDisplay}) => {
-    // const val = percent;
     const dataValues = [{ key: language, data: percent }]
   return (
     <div >
-           <p className='repository__inner-container__values '>{language }</p> 
-        {/* {console.log(dataValues)}                                 */}
+        <p className='repository__inner-container__values'>{language }</p> 
         <RadialGauge
-            
             data={dataValues}
             minValue={0}
             maxValue={100}
@@ -22,9 +19,8 @@ const PieChart = ({percent, language, percentDisplay}) => {
                 label={percentDisplay} />} 
             />}
             />
-</div>
+    </div>
   )
 }
-
 
 export default PieChart

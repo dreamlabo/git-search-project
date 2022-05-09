@@ -33,6 +33,7 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+
 h1,
 h2,
 h3,
@@ -44,26 +45,30 @@ dl,
 dd,
 label
  {
-    /* font-family: 'Raleway', sans-serif; */
     color: var(--white-clr);
     background-color: inherit;
 }
 
+
 a {
     color: var(--white-clr)
 }
+
 a:hover {
     color: var(--accent-clr-one)
 }
+
 
 .restraint-container {
     width: min(100% - 2rem, 1500px);
     margin: 0 auto;
 }
 
+
 .inner-wrapper {
     margin: 1rem 0 ;
 }
+
 
 .inner-wrapper h1 {
     margin-bottom: .5rem;
@@ -115,7 +120,6 @@ a:hover {
     align-items: flex-start;
     justify-content: space-around;
     padding-bottom: 1rem;
-    /* text-align: center; */
 }
 
 
@@ -164,10 +168,7 @@ a:hover {
 
 
 .searchStats_inner-grid_item {
-    /* align-self: flex-end; */
     margin-right: 1em;
-    /* margin-bottom: .5em; */
-    /* margin-top: .5em; */
 }
 
 

@@ -8,16 +8,13 @@ const FilterComponent = ({}) => {
                         'Kotlin', 'Node',  'Objective-C', 'PHP', 
                         'Python', 'R', 'Swift', 'TypeScript'];
   const languageSearchTerms = [];
+  
   // State Variables
   const [isCheckboxFieldOpen, setIsCheckboxFieldOpen] = useState(false);
   const [filterTerm, setFilterTerm] = useState([]);
 
 
-
-
-
   // Functions
-
   const setDropdownCheckboxesOpen = () => {
     setIsCheckboxFieldOpen(!isCheckboxFieldOpen);
     console.log(isCheckboxFieldOpen);
@@ -25,7 +22,6 @@ const FilterComponent = ({}) => {
 
 
   const checkboxHandler = (language => {
-    // console.log('checked ' + language);
     const containsTerm = languageSearchTerms.indexOf(language)
     if (containsTerm !== -1){
         languageSearchTerms.splice(containsTerm, 1)
@@ -33,9 +29,6 @@ const FilterComponent = ({}) => {
     else {
       languageSearchTerms.push(language);
     }
-
-    console.log(languageSearchTerms)
-    // updateFilterTerms(language);
   });
 
   
