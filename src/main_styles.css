@@ -58,6 +58,10 @@ a:hover {
     color: var(--accent-clr-one)
 }
 
+.a__word-wrap {
+    overflow-wrap: anywhere;
+}
+
 
 .restraint-container {
     width: min(100% - 2rem, 1500px);

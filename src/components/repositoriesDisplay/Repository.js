@@ -91,12 +91,12 @@ const Repository = ({repoName, repoOwner, stars, description, primaryLanguage, l
 
                                 <div className='repository__inner-container'>
                                     <p className='repository__values-container__heading'>Repository URL:</p>
-                                    <p><a href={repo_html_url} target="_blank" rel="noopener noreferrer">{repo_html_url}</a></p>
+                                    <p><a className='a__word-wrap' href={repo_html_url} target="_blank" rel="noopener noreferrer">{repo_html_url}</a></p>
                                 </div>
 
                                 { homepage && <div className='repository__inner-container'>
                                     <p className='repository__values-container__heading'>Homepage:</p>
-                                    <p><a href={homepage} target="_blank" rel="noopener noreferrer">{homepage}</a></p>
+                                    <p><a className='a__word-wrap' href={homepage} target="_blank" rel="noopener noreferrer">{homepage}</a></p>
                                 </div>}
 
                             
