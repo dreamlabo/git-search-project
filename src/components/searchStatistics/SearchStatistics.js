@@ -4,6 +4,7 @@ import useMediaQuery from '../../hooks/UseMediaQuery.js'
 import '../../main_styles.css';
 import {Gradient, GradientStop, BarChart, BarSeries, LinearGaugeSeries, LinearGauge, LinearGaugeBar, LinearGaugeOuterBar, ChartTooltip} from 'reaviz';
 const color = "#484848"
+//  added a comment
 
 const SearchStatistics = () => {
 
@@ -37,8 +38,8 @@ const SearchStatistics = () => {
             width = 250
           }
           const percent = (sortedList[language]/searchResults.items.length) * 100;
-          // console.log('percent: ' + percent)
-          return <div className={ isSmallerScreen ? '' : 'searchStats_inner-grid'}>
+      
+          return <div key={i + language} className={ isSmallerScreen ? '' : 'searchStats_inner-grid'}>
                     <p className='searchStats_inner-grid_item'>{language}</p>
                     <LinearGauge className='searchStats_barchart'
                         height={20}
