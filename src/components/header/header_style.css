@@ -1,6 +1,9 @@
 .header__restraint-container {
     width: min(100% - 1rem, 1500px);
     margin: 0 auto; 
+ 
+    
+    
 }
 
 .header__main-container {
@@ -9,6 +12,12 @@
     background-color: var(--main-clr-light);
     font-weight: var(--font-bold);
     font-size: 5px;
+    position: -webkit-sticky; /* Safari */  
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 0px 4px 2px #121212;
+    
 }
 
 

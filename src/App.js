@@ -14,7 +14,7 @@ function App() {
   const providerSearchValue = useMemo(() => ({searchResults, setSearchResults}), [searchResults, setSearchResults]);
   // const providerIsLoading = useMemo(() => ({isLoading, setIsLoading}), [isLoading, setIsLoading]);
   return (
-    <div>
+    <div className="page-container">
       <Header/>
       <SearchContext.Provider value={providerSearchValue}>
         <Search/>
