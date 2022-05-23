@@ -5,7 +5,7 @@
 
 .header__main-container {
     color: white;
-    padding: .5rem 0;
+    padding: .75rem 0;
     background-color: var(--main-clr-light);
     font-weight: var(--font-bold);
     font-size: 5px;
@@ -39,6 +39,6 @@
 
 @media (min-width: 1000px) {
     .header__main-container {
-        padding: 1rem 0;
+        padding: 1.25rem 0;
     }
 }
